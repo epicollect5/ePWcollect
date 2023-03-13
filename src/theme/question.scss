@@ -167,11 +167,13 @@ textarea {
 //render smaller date & time pickers in GROUP(s)
 .question-group {
     .chip-datetimepicker {
+        color: #fff;
         .datetime-value {
             width: 170px;
             input[type="date"],
             input[type="time"] {
                 font-size: 14px;
+                color: #fff;
             }
         }
     }

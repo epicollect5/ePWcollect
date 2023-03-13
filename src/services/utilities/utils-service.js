@@ -528,7 +528,7 @@ export const utilsService = {
         const rootStore = useRootStore();
         return new Promise((resolve) => {
             if (rootStore.device.platform === PARAMETERS.WEB) {
-                resolve('Epicollect5');
+                resolve('EpiWatch');
             }
             resolve(rootStore.app.name);
         });
@@ -617,7 +617,7 @@ export const utilsService = {
         if (Capacitor.isNativePlatform()) {
             if (projectModel.getProjectRef() === DEMO_PROJECT.PROJECT_REF) {
                 appStoragePath = rootStore.persistentDir + PARAMETERS.LOGOS_DIR + projectModel.getProjectRef() + '/mobile-logo.jpg?' + new Date().getTime();
-                markup = '<img class="project-logo" width="32" height="32" src="' + appStoragePath + '" onError="this.src = \'assets/images/ec5-demo-project-logo.jpg\'"/>';
+                markup = '<img class="project-logo" width="32" height="32" src="' + appStoragePath + '" onError="this.src = \'assets/images/ew-sample-project-logo.jpg\'"/>';
                 markup += hideName ? '' : '<span>&nbsp;' + projectModel.getProjectName().toUpperCase() + '</span>';
             }
             else {

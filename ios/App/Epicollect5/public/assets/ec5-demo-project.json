@@ -326,15 +326,15 @@
                 ],
                 "details": {
                     "ref": "b963c3867b1441b89cb552b982f04bc8",
-                    "name": "EC5 Demo Project",
-                    "slug": "ec5-demo-project",
+                    "name": "EpiWatch Sample Project",
+                    "slug": "ew-sample-project",
                     "access": "public",
                     "status": "active",
                     "category": "general",
                     "logo_url": "b963c3867b1441b89cb552b982f04bc8",
                     "visibility": "listed",
-                    "description": "This demo project is a public project to be used by anyone who would like to test Epicollect5. \r\nIt comes preloaded when you download the Epicollect5 app from the Play Store or the App Store. \r\nFeel free to add any entry, just remember your entries are public therefore other people can see them.\r\nHave fun!",
-                    "small_description": "Epicollect5 Demo Project"
+                    "description": "This demo project is a public project to be used by anyone who would like to test EpiWatch. \r\nIt comes preloaded when you download the EpiWatch app from the Play Store or the App Store. \r\nFeel free to add any entry, just remember your entries are public therefore other people can see them.\r\nHave fun!",
+                    "small_description": "EpiWatch Demo Project"
                 },
                 "entries_limits": []
             }
@@ -715,8 +715,8 @@
         "type": "project",
         "project": {
             "ref": "b963c3867b1441b89cb552b982f04bc8",
-            "name": "EC5 Demo Project",
-            "slug": "ec5-demo-project",
+            "name": "EpiWatch Sample Project",
+            "slug": "ew-sample-project",
             "forms": [
                 {
                     "ref": "b963c3867b1441b89cb552b982f04bc8_5784e0609397d",
@@ -962,12 +962,12 @@
             "category": "general",
             "logo_url": "b963c3867b1441b89cb552b982f04bc8",
             "visibility": "listed",
-            "description": "This demo project is a public project to be used by anyone who would like to test Epicollect5. \r\nIt comes preloaded when you download the Epicollect5 app from the Play Store or the App Store. \r\nFeel free to add any entry, just remember your entries are public therefore other people can see them.\r\nHave fun!",
+            "description": "This demo project is a public project to be used by anyone who would like to test EpiWatch. \r\nIt comes preloaded when you download the EpiWatch app from the Play Store or the App Store. \r\nFeel free to add any entry, just remember your entries are public therefore other people can see them.\r\nHave fun!",
             "entries_limits": [],
-            "small_description": "Epicollect5 Demo Project",
+            "small_description": "EpiWatch Demo Project",
             "created_at": "2016-07-12 13:19:44",
             "can_bulk_upload": "nobody",
-            "homepage": "http:\/\/localhost\/project\/ec5-demo-project"
+            "homepage": "http:\/\/localhost\/project\/ew-sample-project"
         }
     }
 }

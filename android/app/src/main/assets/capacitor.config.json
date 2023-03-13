@@ -1,6 +1,6 @@
 {
-	"appId": "uk.ac.imperial.epicollect.five",
-	"appName": "Epicollect5",
+	"appId": "uk.ac.ox.bdi.epicollect.pw",
+	"appName": "EpiWatch",
 	"bundledWebRuntime": false,
 	"npmClient": "npm",
 	"webDir": "dist",

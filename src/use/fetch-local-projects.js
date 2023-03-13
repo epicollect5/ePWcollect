@@ -28,7 +28,7 @@ export function fetchLocalProjects () {
                             //show project demo logo
                             if (res.rows.item(i).project_ref === DEMO_PROJECT.PROJECT_REF) {
                                 appPersistentStoragePath =
-                                    './assets/images/ec5-demo-project-logo.jpg';
+                                    './assets/images/ew-sample-project-logo.jpg';
                             } else {
                                 appPersistentStoragePath = Capacitor.convertFileSrc(
                                     rootStore.persistentDir +

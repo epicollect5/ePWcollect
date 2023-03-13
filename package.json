@@ -1,5 +1,5 @@
 {
-  "name": "uk.ac.imperial.epicollect.five",
+  "name": "uk.ac.ox.bdi.epicollect.pw",
   "version": "5.0.5",
   "private": true,
   "description": "Free and easy-to-use mobile data-gathering platform",
@@ -21,8 +21,8 @@
     "prod": "export VUE_APP_DEBUG= && ionic cap copy",
     "vitest": "vitest",
     "vitest-ui": "vitest --ui",
-    "web": "export VUE_APP_MODE=WEB && ionic serve --no-open",
-    "pwa": "export VUE_APP_MODE=PWA && export VUE_APP_DEBUG=1 && ionic serve --no-open -p 1234",
+    "web": "export VUE_APP_MODE=WEB && ionic serve --no-open -p 8881",
+    "pwa": "export VUE_APP_MODE=PWA && export VUE_APP_DEBUG=1 && ionic serve --no-open -p 8882",
     "pwa-build-prod": "export VUE_APP_MODE=PWA && export VUE_APP_DEBUG= && VUE_APP_BYPASS_UNIQUENESS= && ionic build",
     "pwa-build-dev": "export VUE_APP_MODE=PWA && export VUE_APP_DEBUG=1 && ionic build"
   },

@@ -98,6 +98,12 @@
 					</ion-col>
 				</ion-row>
 
+				<ion-item-divider color="light">
+					<ion-label>
+						Metadata
+					</ion-label>
+				</ion-item-divider>
+
 				<ion-row class="ion-margin-bottom ion-margin-top">
 					<ion-col
 						size-xs="8"
@@ -206,6 +212,38 @@
 					</ion-col>
 				</ion-row>
 
+				<ion-item-divider color="light">
+					<ion-label>
+						Genomic Data
+					</ion-label>
+				</ion-item-divider>
+				<ion-row class="ion-margin-top">
+					<ion-col
+						size-xs="8"
+						offset-xs="2"
+						size-sm="6"
+						offset-sm="3"
+						size-md="4"
+						offset-md="4"
+						size-lg="4"
+						offset-lg="4"
+						class="ion-align-self-center"
+					>
+						<ion-button
+							:disabled="state.videos.length===0"
+							color="secondary"
+							expand="block"
+							@click="uploadMedia(PARAMETERS.QUESTION_TYPES.VIDEO)"
+						>
+							<ion-icon
+								slot="start"
+								:icon="documentOutline"
+							></ion-icon>
+							Upload files
+						</ion-button>
+					</ion-col>
+				</ion-row>
+
 			</ion-grid>
 
 		</template>
@@ -214,6 +252,7 @@
 
 <script>
 import {
+	documentOutline,
 	videocam,
 	chevronBackOutline,
 	checkmark,
@@ -558,6 +597,7 @@ export default {
 			...computedScope,
 			state,
 			//icons
+			documentOutline,
 			videocam,
 			chevronBackOutline,
 			checkmark,

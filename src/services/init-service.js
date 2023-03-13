@@ -30,7 +30,7 @@ export const initService = {
         const rootStore = useRootStore();
         if ([PARAMETERS.WEB, PARAMETERS.PWA].includes(rootStore.device.platform)) {
             return {
-                name: 'Epicollect5',
+                name: 'EpiWatch',
                 version: 'n/a'
             };
         }
@@ -273,7 +273,7 @@ export const initService = {
         }
 
         return new Promise((resolve, reject) => {
-
+            debugger;
             //insert the demo project only on first install
             if (!window.localStorage.is_app_already_installed) {
 
@@ -285,7 +285,7 @@ export const initService = {
                     DEMO_PROJECT.MAPPING = JSON.stringify(meta.project_mapping);
 
 
-
+                    debugger;
                     databaseInsertService.insertProject(
                         DEMO_PROJECT.PROJECT_SLUG,
                         DEMO_PROJECT.PROJECT_NAME,

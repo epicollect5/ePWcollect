@@ -11,7 +11,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:background">@null</item>
-        <!-- Epicollect5 Colors on light theme -->
+        <!-- EpiWatch Colors on light theme -->
         <item name="colorPrimaryDark">#673C90</item>
         <item name="colorAccent">#673C90</item>
         <item name="android:statusBarColor">#331e48</item>

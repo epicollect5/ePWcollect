@@ -243,7 +243,13 @@
 									@question-mounted="onQuestionMounted"
 									:isGroupInput="false"
 								></question-search>
-
+								<question-filefast
+									:type="state.questionParams.type"
+									:inputRef="state.questionParams.currentInputRef"
+									v-if="state.questionParams.type==='filefast'"
+									@question-mounted="onQuestionMounted"
+									:isGroupInput="false"
+								></question-filefast>
 							</div>
 
 							<div v-if="state.showSave && !state.isFetching">

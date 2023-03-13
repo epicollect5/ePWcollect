@@ -1,5 +1,5 @@
 export const PARAMETERS = {
-    APP_NAME: 'Epicollect5',
+    APP_NAME: 'EpiWatch',
     USER_GUIDE_URL: 'https://docs.epicollect.net',
     COMMUNITY_SUPPORT_URL: 'https://community.epicollect.net',
 
@@ -376,13 +376,13 @@ export const MIGRATIONS = {
 };
 
 export const DEMO_PROJECT = {
-    PROJECT_LOGO_IMG_FILENAME: 'ec5-demo-project-logo.jpg',
+    PROJECT_LOGO_IMG_FILENAME: 'epiwatch-example-logo.jpg',
     PROJECT_LOGO_STORED_FILENAME: 'mobile-logo.jpg',
-    PROJECT_FILENAME: './assets/ec5-demo-project.json',
-    PROJECT_NAME: 'EC5 Demo Project',
-    PROJECT_SLUG: 'ec5-demo-project',
-    PROJECT_REF: 'b963c3867b1441b89cb552b982f04bc8',
-    LAST_UPDATED: '2016-10-26 16:06:57',
+    PROJECT_FILENAME: './assets/epiwatch-example.json',
+    PROJECT_NAME: 'EpiWatch Example',
+    PROJECT_SLUG: 'epiwatch-example',
+    PROJECT_REF: '2c3a28f7d44b4235be79417b484f5ea9',
+    LAST_UPDATED: '2023-03-13 15:53:05',
     PROJECT_EXTRA: '',//set at runtime
     MAPPING: ''//set at runtime
 };
