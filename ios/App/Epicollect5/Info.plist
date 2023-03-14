@@ -5,7 +5,7 @@
 		<key>CFBundleDevelopmentRegion</key>
 		<string>en</string>
 		<key>CFBundleDisplayName</key>
-		<string>EpiWatch</string>
+		<string>Epiwatch</string>
 		<key>CFBundleExecutable</key>
 		<string>$(EXECUTABLE_NAME)</string>
 		<key>CFBundleIdentifier</key>
@@ -51,21 +51,21 @@
 		<key>LSRequiresIPhoneOS</key>
 		<true/>
 		<key>NSCameraUsageDescription</key>
-		<string>EpiWatch needs to take photos and video</string>
+		<string>Epiwatch needs to take photos and video</string>
 		<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-		<string>EpiWatch requires constant access to your location in order to
+		<string>Epiwatch requires constant access to your location in order to
         track your position, even when the screen is off or the app is in the
         background.</string>
 		<key>NSLocationAlwaysUsageDescription</key>
-		<string>EpiWatch requires constant access to your location in order to track your position, even when the screen is off or the app is in the background.</string>
+		<string>Epiwatch requires constant access to your location in order to track your position, even when the screen is off or the app is in the background.</string>
 		<key>NSLocationWhenInUseUsageDescription</key>
-		<string>EpiWatch requires access to your location when the screen is on and the app is displayed.</string>
+		<string>Epiwatch requires access to your location when the screen is on and the app is displayed.</string>
 		<key>NSMicrophoneUsageDescription</key>
-		<string>EpiWatch needs to Record Audio With Video</string>
+		<string>Epiwatch needs to Record Audio With Video</string>
 		<key>NSPhotoLibraryAddUsageDescription</key>
-		<string>EpiWatch stores camera photos to camera</string>
+		<string>Epiwatch stores camera photos to camera</string>
 		<key>NSPhotoLibraryUsageDescription</key>
-		<string>EpiWatch picks Photos from Library</string>
+		<string>Epiwatch picks Photos from Library</string>
 		<key>UILaunchStoryboardName</key>
 		<string>LaunchScreen</string>
 		<key>UIMainStoryboardFile</key>

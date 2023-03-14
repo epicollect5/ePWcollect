@@ -1,5 +1,5 @@
 export const PARAMETERS = {
-    APP_NAME: 'EpiWatch',
+    APP_NAME: 'Epiwatch',
     USER_GUIDE_URL: 'https://docs.epicollect.net',
     COMMUNITY_SUPPORT_URL: 'https://community.epicollect.net',
 
@@ -16,6 +16,26 @@ export const PARAMETERS = {
 
     EASTER_EGG: {
         PROJECT_REF: '031ad19cdaf04dbb9cc9a1c2086bdcbd'
+    },
+
+    FILEPICKER_INPUT: {
+        max: null,
+        min: null,
+        ref: '2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb_640f5e3d93cab',
+        type: 'file',
+        group: [],
+        jumps: [],
+        regex: null,
+        branch: [],
+        verify: false,
+        default: null,
+        is_title: false,
+        question: 'Genome File',
+        uniqueness: 'none',
+        is_required: false,
+        datetime_format: null,
+        possible_answers: [],
+        set_to_current_datetime: false
     },
 
     //platforms
@@ -172,8 +192,8 @@ export const PARAMETERS = {
         GROUP: 'group',
         README: 'readme',
         SEARCH_SINGLE: 'searchsingle',
-        SEARCH_MULTIPLE: 'searchmultiple'
-
+        SEARCH_MULTIPLE: 'searchmultiple',
+        FILE: 'file'
     },
 
     QUESTION_ANSWER_MAX_LENGTHS: {
@@ -379,10 +399,10 @@ export const DEMO_PROJECT = {
     PROJECT_LOGO_IMG_FILENAME: 'epiwatch-example-logo.jpg',
     PROJECT_LOGO_STORED_FILENAME: 'mobile-logo.jpg',
     PROJECT_FILENAME: './assets/epiwatch-example.json',
-    PROJECT_NAME: 'EpiWatch Example',
+    PROJECT_NAME: 'Epiwatch Example',
     PROJECT_SLUG: 'epiwatch-example',
     PROJECT_REF: '2c3a28f7d44b4235be79417b484f5ea9',
-    LAST_UPDATED: '2023-03-13 15:53:05',
+    LAST_UPDATED: '2023-03-13 17:28:00',
     PROJECT_EXTRA: '',//set at runtime
     MAPPING: ''//set at runtime
 };

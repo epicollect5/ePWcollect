@@ -4,6 +4,7 @@ import { databaseSelectService } from '@/services/database/database-select-servi
 import { databaseMigrateService } from '@/services/database/database-migrate-service';
 import { databaseDeleteService } from '@/services/database/database-delete-service';
 import { databaseInsertService } from '@/services/database/database-insert-service';
+import { utilsService } from '@/services/utilities/utils-service';
 import { useRootStore } from '@/stores/root-store';
 import { useDBStore } from '@/stores/db-store';
 import { PARAMETERS, MIGRATIONS, DEMO_PROJECT } from '@/config';
@@ -30,7 +31,7 @@ export const initService = {
         const rootStore = useRootStore();
         if ([PARAMETERS.WEB, PARAMETERS.PWA].includes(rootStore.device.platform)) {
             return {
-                name: 'EpiWatch',
+                name: 'Epiwatch',
                 version: 'n/a'
             };
         }
@@ -273,19 +274,19 @@ export const initService = {
         }
 
         return new Promise((resolve, reject) => {
-            debugger;
             //insert the demo project only on first install
             if (!window.localStorage.is_app_already_installed) {
 
                 _getDemoProjectFromLocalFile(DEMO_PROJECT.PROJECT_FILENAME).then((response) => {
 
                     //just the "data" content, not the whole response
-                    const meta = JSON.parse(response).data.meta;
+
+                    //Make changes for epiwatch app
+                    const meta = utilsService.epiwatchifyProject(response);
+
                     DEMO_PROJECT.PROJECT_EXTRA = JSON.stringify(meta.project_extra);
                     DEMO_PROJECT.MAPPING = JSON.stringify(meta.project_mapping);
 
-
-                    debugger;
                     databaseInsertService.insertProject(
                         DEMO_PROJECT.PROJECT_SLUG,
                         DEMO_PROJECT.PROJECT_NAME,

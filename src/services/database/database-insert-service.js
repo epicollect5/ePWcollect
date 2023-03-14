@@ -23,7 +23,7 @@ export const databaseInsertService = {
     },
 
     async insertProject (projectSlug, projectName, projectRef, jsonExtra, serverUrl, lastUpdated, mapping) {
-        debugger;
+
         const query = 'INSERT INTO projects (slug, name, project_ref, json_extra, server_url, last_updated, mapping) VALUES (?,?,?,?,?,?,?)';
         const params = [
             projectSlug,

@@ -1,6 +1,6 @@
 {
 	"appId": "uk.ac.ox.bdi.epicollect.pw",
-	"appName": "EpiWatch",
+	"appName": "Epiwatch",
 	"bundledWebRuntime": false,
 	"npmClient": "npm",
 	"webDir": "dist",

@@ -1,0 +1,524 @@
+{
+    "name": "458426",
+    "year": null,
+    "month": null,
+    "day": null,
+    "country": null,
+    "createdAt": "2023-03-14T14:06:11.040Z",
+    "fileId": "ec376d09f2555fbbe95411df855cbfb34cf51cae",
+    "analysis": {
+        "speciator": {
+            "organismName": "Salmonella enterica subsp. enterica serovar Typhi",
+            "organismId": "90370",
+            "source": "Curated",
+            "confidence": "good",
+            "matchingHashes": "927/1000",
+            "pValue": 0,
+            "mashDistance": 0.0018390000000000001,
+            "referenceId": "Salmonella_enterica/0001.fna.gz",
+            "superkingdomName": "Bacteria",
+            "superkingdomId": "2",
+            "genusName": "Salmonella",
+            "genusId": "590",
+            "speciesName": "Salmonella enterica",
+            "speciesId": "28901",
+            "__v": "v3.0.1"
+        },
+        "serotype": {
+            "source": "SISTR",
+            "subspecies": "enterica",
+            "value": "Typhi",
+            "__v": "sistr-v1.1.1"
+        },
+        "paarsnp": {
+            "resistanceProfile": [
+                {
+                    "determinantRules": {
+                        "blaSHV-12": "RESISTANT"
+                    },
+                    "determinants": {
+                        "variants": [],
+                        "acquired": [
+                            {
+                                "resistanceEffect": "RESISTANCE",
+                                "gene": "blaSHV-12"
+                            }
+                        ]
+                    },
+                    "state": "RESISTANT",
+                    "agent": {
+                        "name": "Ampicillin",
+                        "type": "Beta-Lactams",
+                        "key": "AMP"
+                    }
+                },
+                {
+                    "determinantRules": {
+                        "blaSHV-12": "RESISTANT"
+                    },
+                    "determinants": {
+                        "variants": [],
+                        "acquired": [
+                            {
+                                "resistanceEffect": "RESISTANCE",
+                                "gene": "blaSHV-12"
+                            }
+                        ]
+                    },
+                    "state": "RESISTANT",
+                    "agent": {
+                        "name": "Broad-Spectrum Cephalosporins",
+                        "type": "Broad-Spectrum Cephalosporins",
+                        "key": "CEP"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Chloramphenicol",
+                        "type": "Phenicols",
+                        "key": "CHL"
+                    }
+                },
+                {
+                    "determinantRules": {
+                        "gyrA_S83F": "INTERMEDIATE",
+                        "gyrA_D87N__qnrB": "RESISTANT",
+                        "gyrA_D87N": "INTERMEDIATE",
+                        "parC_S80I__qnrB": "RESISTANT",
+                        "qnrB": "INTERMEDIATE",
+                        "parC_S80I": "INTERMEDIATE",
+                        "gyrA_D87N_S83F__parC_S80I": "RESISTANT",
+                        "gyrA_S83F__qnrB": "RESISTANT"
+                    },
+                    "determinants": {
+                        "variants": [
+                            {
+                                "resistanceEffect": "CONTRIBUTES",
+                                "variant": "S83F",
+                                "gene": "gyrA"
+                            },
+                            {
+                                "resistanceEffect": "CONTRIBUTES",
+                                "variant": "D87N",
+                                "gene": "gyrA"
+                            },
+                            {
+                                "resistanceEffect": "CONTRIBUTES",
+                                "variant": "S80I",
+                                "gene": "parC"
+                            }
+                        ],
+                        "acquired": [
+                            {
+                                "resistanceEffect": "CONTRIBUTES",
+                                "gene": "qnrB"
+                            }
+                        ]
+                    },
+                    "state": "RESISTANT",
+                    "agent": {
+                        "name": "Ciprofloxacin",
+                        "type": "Fluoroquinolones",
+                        "key": "CIP"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Sulfonamides",
+                        "type": "Sulfonamides",
+                        "key": "SMX"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Trimethoprim",
+                        "type": "Diaminopyrimidine",
+                        "key": "TMP"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Co-Trimoxazole",
+                        "type": "Combination",
+                        "key": "SXT"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Tetracycline",
+                        "type": "Tetracyclines",
+                        "key": "TCY"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Azithromycin",
+                        "type": "Macrolides",
+                        "key": "AZM"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Colistin",
+                        "type": "Colistin",
+                        "key": "CST"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Meropenem",
+                        "type": "Carbapenems",
+                        "key": "MEM"
+                    }
+                }
+            ],
+            "matches": [
+                {
+                    "resistanceVariants": [],
+                    "refLength": 3150,
+                    "queryStop": 17404,
+                    "refStop": 3150,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 100,
+                    "queryStart": 14255,
+                    "queryId": "ENA|MQUO01000024|MQUO01000024.1 Salmonella enterica subsp. enterica serovar Typhi strain 458426 NODE_24_length_67146_cov_35.3466_ID_47, whole genome shotgun sequence",
+                    "refStart": 1,
+                    "refId": "acrB"
+                },
+                {
+                    "resistanceVariants": [],
+                    "refLength": 861,
+                    "queryStop": 1424,
+                    "refStop": 861,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 100,
+                    "queryStart": 564,
+                    "queryId": "ENA|MQUO01000053|MQUO01000053.1 Salmonella enterica subsp. enterica serovar Typhi strain 458426 NODE_53_length_1497_cov_24.8665_ID_105, whole genome shotgun sequence",
+                    "refStart": 1,
+                    "refId": "blaSHV-12"
+                },
+                {
+                    "resistanceVariants": [],
+                    "refLength": 2415,
+                    "queryStop": 21300,
+                    "refStop": 2415,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 100,
+                    "queryStart": 18886,
+                    "queryId": "ENA|MQUO01000022|MQUO01000022.1 Salmonella enterica subsp. enterica serovar Typhi strain 458426 NODE_22_length_80907_cov_39.5856_ID_43, whole genome shotgun sequence",
+                    "refStart": 1,
+                    "refId": "gyrB"
+                },
+                {
+                    "resistanceVariants": [],
+                    "refLength": 1893,
+                    "queryStop": 80480,
+                    "refStop": 1893,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 100,
+                    "queryStart": 78588,
+                    "queryId": "ENA|MQUO01000003|MQUO01000003.1 Salmonella enterica subsp. enterica serovar Typhi strain 458426 NODE_3_length_280810_cov_38.7302_ID_5, whole genome shotgun sequence",
+                    "refStart": 1,
+                    "refId": "parE"
+                },
+                {
+                    "resistanceVariants": [],
+                    "refLength": 645,
+                    "queryStop": 39617,
+                    "refStop": 645,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 100,
+                    "queryStart": 38973,
+                    "queryId": "ENA|MQUO01000031|MQUO01000031.1 Salmonella enterica subsp. enterica serovar Typhi strain 458426 plasmid pIncX3 NODE_31_length_39906_cov_42.1425_ID_61, whole genome shotgun sequence",
+                    "refStart": 1,
+                    "refId": "qnrB"
+                },
+                {
+                    "resistanceVariants": [
+                        {
+                            "queryStop": 71812,
+                            "queryStart": 71812,
+                            "refStop": 238,
+                            "refStart": 238,
+                            "name": "S80I"
+                        }
+                    ],
+                    "refLength": 2259,
+                    "queryStop": 73832,
+                    "refStop": 2259,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 99.96,
+                    "queryStart": 71574,
+                    "queryId": "ENA|MQUO01000003|MQUO01000003.1 Salmonella enterica subsp. enterica serovar Typhi strain 458426 NODE_3_length_280810_cov_38.7302_ID_5, whole genome shotgun sequence",
+                    "refStart": 1,
+                    "refId": "parC"
+                },
+                {
+                    "resistanceVariants": [
+                        {
+                            "queryStop": 387,
+                            "queryStart": 387,
+                            "refStop": 247,
+                            "refStart": 247,
+                            "name": "S83F"
+                        },
+                        {
+                            "queryStop": 399,
+                            "queryStart": 399,
+                            "refStop": 259,
+                            "refStart": 259,
+                            "name": "D87N"
+                        }
+                    ],
+                    "refLength": 2637,
+                    "queryStop": 2776,
+                    "refStop": 2637,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 99.89,
+                    "queryStart": 140,
+                    "queryId": "ENA|MQUO01000013|MQUO01000013.1 Salmonella enterica subsp. enterica serovar Typhi strain 458426 NODE_13_length_144728_cov_35.8582_ID_25, whole genome shotgun sequence",
+                    "refStart": 1,
+                    "refId": "gyrA"
+                }
+            ],
+            "library": {
+                "label": "90370",
+                "version": "0.0.17",
+                "source": "PUBLIC"
+            },
+            "__v": "v3.0.2"
+        },
+        "mlst": {
+            "alleles": [
+                {
+                    "hits": [
+                        1
+                    ],
+                    "gene": "aroC"
+                },
+                {
+                    "hits": [
+                        1
+                    ],
+                    "gene": "dnaN"
+                },
+                {
+                    "hits": [
+                        1
+                    ],
+                    "gene": "hemD"
+                },
+                {
+                    "hits": [
+                        1
+                    ],
+                    "gene": "hisD"
+                },
+                {
+                    "hits": [
+                        1
+                    ],
+                    "gene": "purE"
+                },
+                {
+                    "hits": [
+                        1
+                    ],
+                    "gene": "sucA"
+                },
+                {
+                    "hits": [
+                        5
+                    ],
+                    "gene": "thrA"
+                }
+            ],
+            "url": "http://mlst.warwick.ac.uk/mlst/dbs/Senterica",
+            "st": "1",
+            "__v": "202214121127-v3.2.1"
+        },
+        "metrics": {
+            "contigSums": [
+                488913,
+                856876,
+                1137686,
+                1387629,
+                1632137,
+                1854304,
+                2071948,
+                2276263,
+                2461174,
+                2622437,
+                2777432,
+                2931260,
+                3075988,
+                3219687,
+                3355165,
+                3486952,
+                3601266,
+                3707397,
+                3805315,
+                3897491,
+                3985023,
+                4065930,
+                4139785,
+                4206931,
+                4267556,
+                4323759,
+                4367618,
+                4410984,
+                4453198,
+                4493999,
+                4533905,
+                4567044,
+                4598778,
+                4629699,
+                4656158,
+                4678498,
+                4698701,
+                4715669,
+                4728012,
+                4736544,
+                4744440,
+                4751511,
+                4758298,
+                4764598,
+                4769126,
+                4772466,
+                4775599,
+                4778444,
+                4781141,
+                4782970,
+                4784759,
+                4786538,
+                4788035,
+                4789296,
+                4790156,
+                4790976,
+                4791542,
+                4792084,
+                4792557,
+                4793026,
+                4793435,
+                4793816,
+                4794034,
+                4794247
+            ],
+            "gcContent": "52.0",
+            "nonATCG": 0,
+            "N50Contig": 9,
+            "N50": 184911,
+            "averageContig": 74910,
+            "largestContig": 488913,
+            "smallestContig": 213,
+            "contigs": 64,
+            "length": 4794247,
+            "__v": "v3"
+        },
+        "inctyper": {
+            "Inc Matches": [
+                {
+                    "Reference End": 1,
+                    "Reference Start": 374,
+                    "Contig End": 5719,
+                    "Contig Start": 5346,
+                    "Match Coverage": 100,
+                    "Percent Identity": 100,
+                    "Inc Match": "IncX3_1",
+                    "Group": "all",
+                    "Match ID": "IncX3_1__JN247852",
+                    "Contig": "ENA|MQUO01000031|MQUO01000031.1"
+                }
+            ],
+            "Library": "gram_negative",
+            "__v": "v20220118"
+        },
+        "genotyphi": {
+            "foundLoci": 87,
+            "genotype": "4.3.1.2.1.1",
+            "__v": "v4"
+        },
+        "core": {
+            "summary": {
+                "percentAssemblyMatched": 74.9,
+                "percentKernelMatched": 100,
+                "kernelSize": 3283,
+                "completeAlleles": 3283,
+                "familiesMatched": 3283,
+                "speciesId": "90370",
+                "assemblyId": "ec376d09f2555fbbe95411df855cbfb34cf51cae"
+            },
+            "fp": {
+                "size": 2483,
+                "reference": "007898"
+            },
+            "__v": "v1"
+        },
+        "cgmlst": {
+            "scheme": "senterica_1"
+        }
+    },
+    "reference": false,
+    "upload": {
+        "type": "assembly"
+    },
+    "public": false,
+    "population": false,
+    "binned": false,
+    "id": "64107f5348e175b2fadc996c",
+    "owner": "me"
+}

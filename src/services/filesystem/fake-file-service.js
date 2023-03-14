@@ -3,7 +3,7 @@
 *
 * When running "Export to json":
 *
-* on Android, data are saved in the public storage root, under 'EpiWatch/{project-slug}/'
+* on Android, data are saved in the public storage root, under 'Epiwatch/{project-slug}/'
 * as a project-slug.json
 */
 import { PARAMETERS } from '@/config';

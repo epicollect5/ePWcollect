@@ -45,6 +45,7 @@
     "@capacitor/splash-screen": "^4.0.0",
     "@capacitor/status-bar": "^4.0.0",
     "@capacitor/toast": "^4.0.0",
+    "@capawesome/capacitor-file-picker": "^0.6.2",
     "@ionic-native/core": "^5.36.0",
     "@ionic-native/globalization": "^5.32.1",
     "@ionic/core": "^6.1.12",

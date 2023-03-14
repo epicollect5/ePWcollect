@@ -276,7 +276,7 @@ export default {
 		}
 
 		//Get the entries invalid for all forms and branches to be shown as a flat list
-		//EpiWatch server validation bails out after the first error though
+		//Epiwatch server validation bails out after the first error though
 		//multiple uploads attempts are needed
 		async function getEntriesInvalid() {
 			const projectRef = projectModel.getProjectRef();

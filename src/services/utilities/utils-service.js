@@ -528,7 +528,7 @@ export const utilsService = {
         const rootStore = useRootStore();
         return new Promise((resolve) => {
             if (rootStore.device.platform === PARAMETERS.WEB) {
-                resolve('EpiWatch');
+                resolve('Epiwatch');
             }
             resolve(rootStore.app.name);
         });
@@ -879,5 +879,44 @@ export const utilsService = {
     },
     arrayGroupBy (arr, cb) {
         return arr.reduce((a, b, i) => ((a[cb(b, i, arr)] || (a[cb(b, i, arr)] = [])).push(b), a), {});
+    },
+
+    epiwatchifyProject (json) {
+        //detect file picker placeholder and change type to 'file'
+        const obj = JSON.parse(json);
+        const meta = obj.data.meta;
+        const data = obj.data.data;
+
+        const parentFormRef = data.project.forms[0].ref;
+        const inputs = data.project.forms[0].inputs;
+        let fileInputRef = '';
+
+        //todo: improve by exiting once found
+        inputs.forEach((input) => {
+            if (input.question === '_epiwatch_') {
+                fileInputRef = input.ref;
+                input.type = PARAMETERS.QUESTION_TYPES.FILE;
+                input.question = 'Pick Genome File';
+            }
+        });
+
+        meta.project_extra.forms[parentFormRef].details.inputs.forEach((input) => {
+            if (input.ref === fileInputRef) {
+                input.type = PARAMETERS.QUESTION_TYPES.FILE;
+                input.question = 'Pick Genome File';
+            }
+        });
+
+        meta.project_extra.inputs[fileInputRef].data.type = PARAMETERS.QUESTION_TYPES.FILE;
+        meta.project_extra.inputs[fileInputRef].data.question = 'Pick Genome File';
+
+        meta.project_mapping.forEach((mapping) => {
+            mapping.forms[parentFormRef][fileInputRef].map_to = '_epiwatch_filename';
+        });
+
+        console.log('Modified project ------------->');
+        console.log(JSON.stringify(meta));
+
+        return meta;
     }
 };

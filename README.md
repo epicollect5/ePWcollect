@@ -1,4 +1,4 @@
-# EpiWatch Mobile App (Android & iOS)
+# Epiwatch Mobile App (Android & iOS)
 
 - Vue 3 https://vuejs.org
 - Ionic Vue https://ionicframework.com/docs/vue/overview

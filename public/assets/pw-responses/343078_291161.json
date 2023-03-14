@@ -1,0 +1,419 @@
+{
+    "name": "343078_291161",
+    "year": null,
+    "month": null,
+    "day": null,
+    "country": null,
+    "createdAt": "2023-03-14T14:17:38.695Z",
+    "fileId": "36ff8327aaf2751c63b5c0fedca14e31bff415cc",
+    "analysis": {
+        "speciator": {
+            "organismName": "Salmonella enterica subsp. enterica serovar Typhi",
+            "organismId": "90370",
+            "source": "Curated",
+            "confidence": "good",
+            "matchingHashes": "940/1000",
+            "pValue": 0,
+            "mashDistance": 0.00149601,
+            "referenceId": "Salmonella_enterica/0001.fna.gz",
+            "superkingdomName": "Bacteria",
+            "superkingdomId": "2",
+            "genusName": "Salmonella",
+            "genusId": "590",
+            "speciesName": "Salmonella enterica",
+            "speciesId": "28901",
+            "__v": "v3.0.1"
+        },
+        "serotype": {
+            "source": "SISTR",
+            "subspecies": "enterica",
+            "value": "Typhi",
+            "__v": "sistr-v1.1.1"
+        },
+        "paarsnp": {
+            "resistanceProfile": [
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Ampicillin",
+                        "type": "Beta-Lactams",
+                        "key": "AMP"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Broad-Spectrum Cephalosporins",
+                        "type": "Broad-Spectrum Cephalosporins",
+                        "key": "CEP"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Chloramphenicol",
+                        "type": "Phenicols",
+                        "key": "CHL"
+                    }
+                },
+                {
+                    "determinantRules": {
+                        "gyrA_S83F": "INTERMEDIATE"
+                    },
+                    "determinants": {
+                        "variants": [
+                            {
+                                "resistanceEffect": "CONTRIBUTES",
+                                "variant": "S83F",
+                                "gene": "gyrA"
+                            }
+                        ],
+                        "acquired": []
+                    },
+                    "state": "INTERMEDIATE",
+                    "agent": {
+                        "name": "Ciprofloxacin",
+                        "type": "Fluoroquinolones",
+                        "key": "CIP"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Sulfonamides",
+                        "type": "Sulfonamides",
+                        "key": "SMX"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Trimethoprim",
+                        "type": "Diaminopyrimidine",
+                        "key": "TMP"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Co-Trimoxazole",
+                        "type": "Combination",
+                        "key": "SXT"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Tetracycline",
+                        "type": "Tetracyclines",
+                        "key": "TCY"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Azithromycin",
+                        "type": "Macrolides",
+                        "key": "AZM"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Colistin",
+                        "type": "Colistin",
+                        "key": "CST"
+                    }
+                },
+                {
+                    "determinants": {
+                        "variants": [],
+                        "acquired": []
+                    },
+                    "state": "NOT_FOUND",
+                    "agent": {
+                        "name": "Meropenem",
+                        "type": "Carbapenems",
+                        "key": "MEM"
+                    }
+                }
+            ],
+            "matches": [
+                {
+                    "resistanceVariants": [],
+                    "refLength": 3150,
+                    "queryStop": 78553,
+                    "refStop": 3150,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 100,
+                    "queryStart": 75404,
+                    "queryId": ".ERR2663996.21",
+                    "refStart": 1,
+                    "refId": "acrB"
+                },
+                {
+                    "resistanceVariants": [],
+                    "refLength": 2415,
+                    "queryStop": 21600,
+                    "refStop": 2415,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 100,
+                    "queryStart": 19186,
+                    "queryId": ".ERR2663996.22",
+                    "refStart": 1,
+                    "refId": "gyrB"
+                },
+                {
+                    "resistanceVariants": [],
+                    "refLength": 2259,
+                    "queryStop": 73737,
+                    "refStop": 2259,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 100,
+                    "queryStart": 71479,
+                    "queryId": ".ERR2663996.1",
+                    "refStart": 1,
+                    "refId": "parC"
+                },
+                {
+                    "resistanceVariants": [],
+                    "refLength": 1893,
+                    "queryStop": 80385,
+                    "refStop": 1893,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 100,
+                    "queryStart": 78493,
+                    "queryId": ".ERR2663996.1",
+                    "refStart": 1,
+                    "refId": "parE"
+                },
+                {
+                    "resistanceVariants": [
+                        {
+                            "queryStop": 436,
+                            "queryStart": 436,
+                            "refStop": 247,
+                            "refStart": 247,
+                            "name": "S83F"
+                        }
+                    ],
+                    "refLength": 2637,
+                    "queryStop": 2825,
+                    "refStop": 2637,
+                    "reversed": true,
+                    "strand": "REVERSE",
+                    "evalue": 0,
+                    "pid": 99.96,
+                    "queryStart": 189,
+                    "queryId": ".ERR2663996.12",
+                    "refStart": 1,
+                    "refId": "gyrA"
+                }
+            ],
+            "library": {
+                "label": "90370",
+                "version": "0.0.17",
+                "source": "PUBLIC"
+            },
+            "__v": "v3.0.2"
+        },
+        "mlst": {
+            "alleles": [
+                {
+                    "hits": [
+                        1
+                    ],
+                    "gene": "aroC"
+                },
+                {
+                    "hits": [
+                        1
+                    ],
+                    "gene": "dnaN"
+                },
+                {
+                    "hits": [
+                        2
+                    ],
+                    "gene": "hemD"
+                },
+                {
+                    "hits": [
+                        1
+                    ],
+                    "gene": "hisD"
+                },
+                {
+                    "hits": [
+                        1
+                    ],
+                    "gene": "purE"
+                },
+                {
+                    "hits": [
+                        1
+                    ],
+                    "gene": "sucA"
+                },
+                {
+                    "hits": [
+                        5
+                    ],
+                    "gene": "thrA"
+                }
+            ],
+            "url": "http://mlst.warwick.ac.uk/mlst/dbs/Senterica",
+            "st": "2",
+            "__v": "202214121127-v3.2.1"
+        },
+        "metrics": {
+            "contigSums": [
+                457065,
+                793706,
+                1123914,
+                1386746,
+                1636279,
+                1881349,
+                2091233,
+                2258743,
+                2420547,
+                2574384,
+                2720913,
+                2865722,
+                3009401,
+                3145080,
+                3280390,
+                3412097,
+                3520862,
+                3618845,
+                3714160,
+                3806417,
+                3894670,
+                3975948,
+                4040831,
+                4097722,
+                4154007,
+                4204537,
+                4248523,
+                4292452,
+                4335419,
+                4375387,
+                4414579,
+                4447825,
+                4479899,
+                4510895,
+                4538036,
+                4565122,
+                4591807,
+                4617697,
+                4641076,
+                4663557,
+                4681075,
+                4693475,
+                4702065,
+                4709219,
+                4716044,
+                4721050,
+                4724971,
+                4728483,
+                4731933,
+                4734745,
+                4737519,
+                4738700,
+                4739872
+            ],
+            "gcContent": "52.1",
+            "nonATCG": 81,
+            "N50Contig": 9,
+            "N50": 161804,
+            "averageContig": 89431,
+            "largestContig": 457065,
+            "smallestContig": 1172,
+            "contigs": 53,
+            "length": 4739872,
+            "__v": "v3"
+        },
+        "inctyper": {
+            "Inc Matches": [],
+            "Library": "gram_negative",
+            "__v": "v20220118"
+        },
+        "genotyphi": {
+            "foundLoci": 87,
+            "genotype": "3.2.2",
+            "__v": "v4"
+        },
+        "core": {
+            "summary": {
+                "percentAssemblyMatched": 75.7,
+                "percentKernelMatched": 99.8,
+                "kernelSize": 3279,
+                "completeAlleles": 3274,
+                "familiesMatched": 3278,
+                "speciesId": "90370",
+                "assemblyId": "36ff8327aaf2751c63b5c0fedca14e31bff415cc"
+            },
+            "fp": {
+                "size": 2483,
+                "reference": "CT18"
+            },
+            "__v": "v1"
+        },
+        "cgmlst": {
+            "scheme": "senterica_1"
+        }
+    },
+    "reference": false,
+    "upload": {
+        "type": "assembly"
+    },
+    "public": false,
+    "population": false,
+    "binned": false,
+    "id": "64108202568e906ff4ae5c55",
+    "owner": "me"
+}
