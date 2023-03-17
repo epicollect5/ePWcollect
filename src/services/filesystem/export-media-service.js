@@ -1,5 +1,5 @@
 /*
-Export media files by copying them for the app private folders
+Export media files by copying them from the app private folders
 to a user accessible folder on the device
 Android - Download/epicollect5/{projectSlug} folder
 iOS - todo:

@@ -859,6 +859,7 @@ export const databaseSelectService = {
         const audios = [];
         const photos = [];
         const videos = [];
+        const attachments = [];
         const params = [options.project_ref];
 
         if (options.synced !== null) {
@@ -877,9 +878,10 @@ export const databaseSelectService = {
         return new Promise((resolve, reject) => {
             function _onSuccess () {
                 resolve({
-                    audios: audios,
-                    photos: photos,
-                    videos: videos
+                    audios,
+                    photos,
+                    videos,
+                    attachments
                 });
             }
 
@@ -902,6 +904,11 @@ export const databaseSelectService = {
                 tx.executeSql(query, params.concat(PARAMETERS.QUESTION_TYPES.VIDEO), function (tx, res) {
                     for (i = 0; i < res.rows.length; i++) {
                         videos.push(res.rows.item(i));
+                    }
+                }, _onError);
+                tx.executeSql(query, params.concat(PARAMETERS.QUESTION_TYPES.ATTACHMENT), function (tx, res) {
+                    for (i = 0; i < res.rows.length; i++) {
+                        attachments.push(res.rows.item(i));
                     }
                 }, _onError);
             }, _onError, _onSuccess);

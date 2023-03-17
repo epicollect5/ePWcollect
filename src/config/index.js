@@ -193,7 +193,7 @@ export const PARAMETERS = {
         README: 'readme',
         SEARCH_SINGLE: 'searchsingle',
         SEARCH_MULTIPLE: 'searchmultiple',
-        FILE: 'file'
+        ATTACHMENT: 'attachment'
     },
 
     QUESTION_ANSWER_MAX_LENGTHS: {
@@ -278,6 +278,7 @@ export const PARAMETERS = {
     AUDIO_DIR: 'audios/',
     VIDEO_DIR: 'videos/',
     LOGOS_DIR: 'logos/',
+    ATTACHMENTS_DIR: 'attachments/',
 
     ROUTES: {
         PWA_QUIT: 'pwa-quit',
@@ -402,7 +403,7 @@ export const DEMO_PROJECT = {
     PROJECT_NAME: 'Epiwatch Example',
     PROJECT_SLUG: 'epiwatch-example',
     PROJECT_REF: '2c3a28f7d44b4235be79417b484f5ea9',
-    LAST_UPDATED: '2023-03-13 17:28:00',
+    LAST_UPDATED: '',
     PROJECT_EXTRA: '',//set at runtime
     MAPPING: ''//set at runtime
 };

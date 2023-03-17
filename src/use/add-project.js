@@ -9,6 +9,7 @@ import { errorsService } from '@/services/errors-service';
 import { downloadFileService } from '@/services/download-file-service';
 import { webService } from '@/services/web-service';
 import { logout } from '@/use/logout';
+import { utilsService } from '@/services/utilities/utils-service';
 
 
 //imp: router gets passed because is available only in setup()
@@ -30,8 +31,11 @@ export async function addProject (project, router) {
                 const data = response.data;
                 // Check we have project
                 if (data.meta.project_extra) {
+
+                    const meta = utilsService.epiwatchifyProject(JSON.stringify(response));
+
                     // Load project extra structure into project model
-                    projectModel.loadExtraStructure(data.meta.project_extra);
+                    projectModel.loadExtraStructure(meta.project_extra);
                     // Get number of inputs for this project
                     noInputs = projectModel.getExtraInputs().length === 0;
                     // Remove project model
@@ -50,10 +54,10 @@ export async function addProject (project, router) {
                                 project.slug,
                                 project.name,
                                 project.ref,
-                                JSON.stringify(data.meta.project_extra),
+                                JSON.stringify(meta.project_extra),
                                 rootStore.serverUrl,
                                 data.meta.project_stats.structure_last_updated,
-                                JSON.stringify(data.meta.project_mapping)
+                                JSON.stringify(meta.project_mapping)
                             );
 
                             try {

@@ -268,6 +268,12 @@ export const answerService = {
                     accuracy: ''
                 };
                 break;
+            case PARAMETERS.QUESTION_TYPES.ATTACHMENT:
+                answer.answer = {
+                    filenameOriginal: '',
+                    filenameRenamed: ''
+                };
+                break;
             default:
                 // Check if we have a 'default' answer in the input details
                 defaultAnswer = '';
@@ -351,6 +357,14 @@ export const answerService = {
                         }
                     }
                     break;
+                //hack: always prepend filename in the title
+                case PARAMETERS.QUESTION_TYPES.ATTACHMENT:
+                    if (entry.answers[input.ref]) {
+                        answer = entry.answers[input.ref].answer;
+                        titles.unshift(parseAnswerForViewing(input, answer.filenameOriginal));
+                    }
+                    break;
+                //hack: end
                 default: {
                     // Default i.e. any other question
                     // Check we have an answer

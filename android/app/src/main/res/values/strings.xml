@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">Epiwatch</string>
     <string name="title_activity_main">Epiwatch</string>
-    <string name="package_name">uk.ac.ox.bdi.epicollect.pw</string>
-    <string name="custom_url_scheme">uk.ac.ox.bdi.epicollect.pw</string>
+    <string name="package_name">uk.ac.ox.bdi.epiwatch</string>
+    <string name="custom_url_scheme">uk.ac.ox.bdi.epiwatch</string>
 </resources>

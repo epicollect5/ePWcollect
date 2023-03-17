@@ -175,7 +175,7 @@ export const utilsService = {
     /*
      Value for media is created like {input ref}_{YYYYMMDD}_{filename} where file name will be {timestamp}.{ext}
      */
-    generateMediaFilename (uuid, type) {
+    generateMediaFilename (uuid, type, originalExt) {
 
         const rootStore = useRootStore();
         let ext;
@@ -197,7 +197,13 @@ export const utilsService = {
             case PARAMETERS.QUESTION_TYPES.VIDEO:
                 ext = PARAMETERS.VIDEO_EXT;
                 break;
+            case PARAMETERS.QUESTION_TYPES.ATTACHMENT:
+
+                ext = '.' + originalExt;
+                break;
         }
+
+
 
         return uuid + '_' + this.generateTimestamp() + ext;
     },
@@ -568,6 +574,8 @@ export const utilsService = {
             case PARAMETERS.QUESTION_TYPES.VIDEO:
                 path = PARAMETERS.VIDEO_DIR;
                 break;
+            default:
+                path = PARAMETERS.ATTACHMENTS_DIR;
         }
         return path;
     },
@@ -617,7 +625,7 @@ export const utilsService = {
         if (Capacitor.isNativePlatform()) {
             if (projectModel.getProjectRef() === DEMO_PROJECT.PROJECT_REF) {
                 appStoragePath = rootStore.persistentDir + PARAMETERS.LOGOS_DIR + projectModel.getProjectRef() + '/mobile-logo.jpg?' + new Date().getTime();
-                markup = '<img class="project-logo" width="32" height="32" src="' + appStoragePath + '" onError="this.src = \'assets/images/ew-sample-project-logo.jpg\'"/>';
+                markup = '<img class="project-logo" width="32" height="32" src="' + appStoragePath + '" onError="this.src = \'assets/images/epiwatch-example-logo.jpg\'"/>';
                 markup += hideName ? '' : '<span>&nbsp;' + projectModel.getProjectName().toUpperCase() + '</span>';
             }
             else {
@@ -881,42 +889,41 @@ export const utilsService = {
         return arr.reduce((a, b, i) => ((a[cb(b, i, arr)] || (a[cb(b, i, arr)] = [])).push(b), a), {});
     },
 
+    //add a file questionnat the end of the parent form
     epiwatchifyProject (json) {
-        //detect file picker placeholder and change type to 'file'
+
         const obj = JSON.parse(json);
         const meta = obj.data.meta;
         const data = obj.data.data;
 
         const parentFormRef = data.project.forms[0].ref;
-        const inputs = data.project.forms[0].inputs;
-        let fileInputRef = '';
 
-        //todo: improve by exiting once found
-        inputs.forEach((input) => {
-            if (input.question === '_epiwatch_') {
-                fileInputRef = input.ref;
-                input.type = PARAMETERS.QUESTION_TYPES.FILE;
-                input.question = 'Pick Genome File';
-            }
-        });
+        const fileInput = {
+            max: null,
+            min: null,
+            ref: '2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb_640f5e3d93cab',
+            type: PARAMETERS.QUESTION_TYPES.ATTACHMENT,
+            group: [],
+            jumps: [],
+            regex: null,
+            branch: [],
+            verify: false,
+            default: null,
+            is_title: false,
+            question: 'Genome File',
+            uniqueness: 'none',
+            is_required: true,
+            datetime_format: null,
+            possible_answers: [],
+            set_to_current_datetime: false
+        };
 
-        meta.project_extra.forms[parentFormRef].details.inputs.forEach((input) => {
-            if (input.ref === fileInputRef) {
-                input.type = PARAMETERS.QUESTION_TYPES.FILE;
-                input.question = 'Pick Genome File';
-            }
-        });
-
-        meta.project_extra.inputs[fileInputRef].data.type = PARAMETERS.QUESTION_TYPES.FILE;
-        meta.project_extra.inputs[fileInputRef].data.question = 'Pick Genome File';
-
-        meta.project_mapping.forEach((mapping) => {
-            mapping.forms[parentFormRef][fileInputRef].map_to = '_epiwatch_filename';
-        });
-
-        console.log('Modified project ------------->');
-        console.log(JSON.stringify(meta));
-
+        data.project.forms[0].inputs.push(fileInput);
+        meta.project_extra.forms[parentFormRef].details.inputs.push(fileInput);
+        meta.project_extra.forms[parentFormRef].inputs.push(fileInput.ref);
+        meta.project_extra.inputs[fileInput.ref] = {
+            data: fileInput
+        };
         return meta;
     }
 };

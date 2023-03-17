@@ -1,5 +1,5 @@
 {
-  "name": "uk.ac.ox.bdi.epicollect.pw",
+  "name": "uk.ac.ox.bdi.epiwatch",
   "integrations": {
     "capacitor": {}
   },

@@ -243,13 +243,13 @@
 									@question-mounted="onQuestionMounted"
 									:isGroupInput="false"
 								></question-search>
-								<question-file
+								<question-attachment
 									:type="state.questionParams.type"
 									:inputRef="state.questionParams.currentInputRef"
-									v-if="state.questionParams.type==='file'"
+									v-if="state.questionParams.type==='attachment'"
 									@question-mounted="onQuestionMounted"
 									:isGroupInput="false"
-								></question-file>
+								></question-attachment>
 							</div>
 
 							<div v-if="state.showSave && !state.isFetching">
@@ -311,7 +311,7 @@ import questionText from '@/components/questions/QuestionText';
 import questionTextarea from '@/components/questions/QuestionTextarea';
 import questionTime from '@/components/questions/QuestionTime';
 import questionVideo from '@/components/questions/QuestionVideo';
-import questionFile from '@/components/questions/QuestionFile';
+import questionAttachment from '@/components/questions/QuestionAttachment';
 import questionSave from '@/components/questions/QuestionSave';
 import questionSaved from '@/components/questions/QuestionSaved';
 import { provide } from 'vue';
@@ -352,7 +352,7 @@ export default {
 		questionTextarea,
 		questionTime,
 		questionVideo,
-		questionFile,
+		questionAttachment,
 		questionSave,
 		questionSaved,
 		NotFound,

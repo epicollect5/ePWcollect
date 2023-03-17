@@ -266,7 +266,7 @@ export const initService = {
 
         function _getDemoProjectFromLocalFile (filename) {
             return new Promise((resolve) => {
-                axios(filename)
+                axios(filename + '?' + utilsService.generateTimestamp())
                     .then((data) => {
                         resolve(JSON.stringify(data));
                     });
@@ -283,9 +283,10 @@ export const initService = {
 
                     //Make changes for epiwatch app
                     const meta = utilsService.epiwatchifyProject(response);
-
                     DEMO_PROJECT.PROJECT_EXTRA = JSON.stringify(meta.project_extra);
                     DEMO_PROJECT.MAPPING = JSON.stringify(meta.project_mapping);
+                    //get project vesrion from file
+                    DEMO_PROJECT.LAST_UPDATED = meta.project_stats.structure_last_updated;
 
                     databaseInsertService.insertProject(
                         DEMO_PROJECT.PROJECT_SLUG,

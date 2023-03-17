@@ -51,9 +51,10 @@
 								class="child-entries-item-button"
 								@click.stop="goToChildEntriesPage(entry.entry_uuid, entry.title)"
 							>
-								<ion-label> {{ formName }} </ion-label>
+								<!-- <ion-icon :icon="documentText"></ion-icon> -->
+								<!-- <ion-label> {{ formName }} </ion-label> -->
 								<ion-icon
-									:icon="chevronForward"
+									:icon="enter"
 									slot="end"
 								></ion-icon>
 							</ion-item>
@@ -98,7 +99,7 @@
 import { useRootStore } from '@/stores/root-store';
 import { onMounted } from 'vue';
 import { STRINGS } from '@/config/strings';
-import { chevronForward } from 'ionicons/icons';
+import { chevronForward, documentText, enter } from 'ionicons/icons';
 import { reactive, computed, readonly, toRefs, ref } from '@vue/reactivity';
 import { PARAMETERS } from '@/config';
 import { useRouter } from 'vue-router';
@@ -278,7 +279,9 @@ export default {
 			state,
 			PARAMETERS,
 			//icons
-			chevronForward
+			chevronForward,
+			documentText,
+			enter
 		};
 	}
 };

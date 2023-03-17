@@ -1,4 +1,4 @@
-package uk.ac.ox.bdi.epicollect.pw;
+package uk.ac.ox.bdi.epiwatch;
 
 import android.os.Bundle;
 

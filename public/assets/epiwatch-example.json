@@ -260,8 +260,7 @@
                     },
                     "branch": [],
                     "inputs": [
-                        "2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb_640f2fc95e8f7",
-                        "2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb_640f5e3d93cab"
+                        "2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb_640f2fc95e8f7"
                     ],
                     "details": {
                         "ref": "2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb",
@@ -1317,25 +1316,6 @@
                                 "datetime_format": null,
                                 "possible_answers": [],
                                 "set_to_current_datetime": false
-                            },
-                            {
-                                "max": null,
-                                "min": null,
-                                "ref": "2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb_640f5e3d93cab",
-                                "type": "text",
-                                "group": [],
-                                "jumps": [],
-                                "regex": null,
-                                "branch": [],
-                                "verify": false,
-                                "default": null,
-                                "is_title": true,
-                                "question": "_epiwatch_",
-                                "uniqueness": "none",
-                                "is_required": true,
-                                "datetime_format": null,
-                                "possible_answers": [],
-                                "set_to_current_datetime": false
                             }
                         ],
                         "has_location": true
@@ -1403,27 +1383,6 @@
                         "question": "Metadata",
                         "uniqueness": "none",
                         "is_required": false,
-                        "datetime_format": null,
-                        "possible_answers": [],
-                        "set_to_current_datetime": false
-                    }
-                },
-                "2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb_640f5e3d93cab": {
-                    "data": {
-                        "max": null,
-                        "min": null,
-                        "ref": "2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb_640f5e3d93cab",
-                        "type": "text",
-                        "group": [],
-                        "jumps": [],
-                        "regex": null,
-                        "branch": [],
-                        "verify": false,
-                        "default": null,
-                        "is_title": true,
-                        "question": "_epiwatch_",
-                        "uniqueness": "none",
-                        "is_required": true,
                         "datetime_format": null,
                         "possible_answers": [],
                         "set_to_current_datetime": false
@@ -2505,7 +2464,7 @@
                 ],
                 "details": {
                     "ref": "2c3a28f7d44b4235be79417b484f5ea9",
-                    "name": "EpiWatch Example",
+                    "name": "Epiwatch Example",
                     "slug": "epiwatch-example",
                     "access": "public",
                     "status": "active",
@@ -3243,13 +3202,6 @@
                             "branch": [],
                             "map_to": "1_Metadata",
                             "possible_answers": []
-                        },
-                        "2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb_640f5e3d93cab": {
-                            "hide": false,
-                            "group": [],
-                            "branch": [],
-                            "map_to": "11__epiwatch_",
-                            "possible_answers": []
                         }
                     },
                     "2c3a28f7d44b4235be79417b484f5ea9_6410a1f913fdf": {
@@ -3257,7 +3209,7 @@
                             "hide": false,
                             "group": [],
                             "branch": [],
-                            "map_to": "12_Responses_goes_he",
+                            "map_to": "11_Responses_goes_he",
                             "possible_answers": []
                         }
                     }
@@ -3983,13 +3935,6 @@
                             "branch": [],
                             "map_to": "1_Sample",
                             "possible_answers": []
-                        },
-                        "2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb_640f5e3d93cab": {
-                            "hide": false,
-                            "group": [],
-                            "branch": [],
-                            "map_to": "12_Fasta_Files_Place",
-                            "possible_answers": []
                         }
                     },
                     "2c3a28f7d44b4235be79417b484f5ea9_6410a1f913fdf": {
@@ -4011,7 +3956,7 @@
             "total_users": 0,
             "form_counts": [],
             "branch_counts": [],
-            "structure_last_updated": "2023-03-14 16:48:48"
+            "structure_last_updated": "2023-03-15 17:49:51"
         }
     },
     "data": {
@@ -5073,25 +5018,6 @@
                             "question": "Metadata",
                             "uniqueness": "none",
                             "is_required": false,
-                            "datetime_format": null,
-                            "possible_answers": [],
-                            "set_to_current_datetime": false
-                        },
-                        {
-                            "max": null,
-                            "min": null,
-                            "ref": "2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb_640f5e3d93cab",
-                            "type": "text",
-                            "group": [],
-                            "jumps": [],
-                            "regex": null,
-                            "branch": [],
-                            "verify": false,
-                            "default": null,
-                            "is_title": true,
-                            "question": "_epiwatch_",
-                            "uniqueness": "none",
-                            "is_required": true,
                             "datetime_format": null,
                             "possible_answers": [],
                             "set_to_current_datetime": false

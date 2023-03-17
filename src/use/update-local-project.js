@@ -87,6 +87,7 @@ export function updateLocalProject () {
             );
         }
 
+
         versioningService.checkProjectVersion().then((upToDate) => {
             if (!upToDate) {
                 // Project version out of date

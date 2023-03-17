@@ -163,6 +163,9 @@ export const entryService = {
                 }
             });
 
+            console.log(self.entry);
+            console.log(JSON.stringify(self.entry));
+
             // Unsync all parent entries
             this.unsyncParentEntries(projectModel.getProjectRef(), self.entry.parentEntryUuid).then(function () {
 

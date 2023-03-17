@@ -28,7 +28,7 @@ export function fetchLocalProjects () {
                             //show project demo logo
                             if (res.rows.item(i).project_ref === DEMO_PROJECT.PROJECT_REF) {
                                 appPersistentStoragePath =
-                                    './assets/images/ew-sample-project-logo.jpg';
+                                    './assets/images/epiwatch-example-logo.jpg';
                             } else {
                                 appPersistentStoragePath = Capacitor.convertFileSrc(
                                     rootStore.persistentDir +

@@ -138,7 +138,6 @@ export const entryCommonService = {
         entry.title = '';
 
         // Form
-
         if (!isBranch) {
             titles = answerService.getAnswersTitles(entry, form.inputs, form.group, inputs);
         } else {

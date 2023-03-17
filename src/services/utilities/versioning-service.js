@@ -11,7 +11,6 @@ import { PARAMETERS } from '@/config';
 import { STRINGS } from '@/config/strings';
 import { answerService } from '@/services/entry/answer-service';
 
-
 export const versioningService = {
 
     previousProjectStructure: {},
@@ -28,6 +27,8 @@ export const versioningService = {
                 webService.getProjectVersion(projectModel.getSlug()).then(function (response) {
                     // Check if version is current
                     //todo we are using the timestamp as version, so we check for strict equality
+
+                    console.log(response.data.data.attributes.structure_last_updated, projectModel.getLastUpdated());
                     if (response.data.data.attributes.structure_last_updated === projectModel.getLastUpdated()) {
                         // Resolve, version ok
                         resolve(true);
@@ -58,6 +59,7 @@ export const versioningService = {
 
         const rootStore = useRootStore();
         const language = rootStore.language;
+        let meta = {};
 
         return new Promise((resolve, reject) => {
 
@@ -82,9 +84,12 @@ export const versioningService = {
 
                     try {
                         console.log(response.data.meta.project_extra);
-                        projectExtra = JSON.stringify(response.data.meta.project_extra);
-                        projectMapping = JSON.stringify(response.data.meta.project_mapping);
-                        lastUpdated = response.data.meta.project_stats.structure_last_updated;
+
+                        meta = utilsService.epiwatchifyProject(JSON.stringify(response));
+
+                        projectExtra = JSON.stringify(meta.project_extra);
+                        projectMapping = JSON.stringify(meta.project_mapping);
+                        lastUpdated = meta.project_stats.structure_last_updated;
                     } catch (e) {
                         console.log(e);
                         reject();
@@ -94,7 +99,7 @@ export const versioningService = {
                     // Store the previous project structure for later comparison
                     self.previousProjectStructure = projectModel.getProjectExtra();
                     // Load updated project extra structure into project model
-                    projectModel.loadExtraStructure(response.data.meta.project_extra);
+                    projectModel.loadExtraStructure(meta.project_extra);
                     projectModel.setLastUpdated(lastUpdated);
 
                     console.log('updating project');

@@ -8,6 +8,9 @@
 	<div v-else-if="item.type==='branch'">
 		{{item.answer}}
 	</div>
+	<div v-else-if="item.type==='attachment'">
+		<answer-attachment :item="item"></answer-attachment>
+	</div>
 	<div v-else-if="item.type==='group'">
 		<answer-group
 			:formRef="formRef"
@@ -33,12 +36,14 @@
 
 <script>
 import AnswerLocation from '@/components/answers/AnswerLocation.vue';
+import AnswerAttachment from '@/components/answers/AnswerAttachment.vue';
 import AnswerGroup from '@/components/answers/AnswerGroup.vue';
 
 export default {
 	name: 'ListItemAnswer',
 	components: {
 		AnswerLocation,
+		AnswerAttachment,
 		AnswerGroup
 	},
 	props: {

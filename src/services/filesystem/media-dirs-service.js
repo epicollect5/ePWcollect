@@ -63,7 +63,8 @@ export const mediaDirsService = {
             PARAMETERS.PHOTO_DIR,
             PARAMETERS.AUDIO_DIR,
             PARAMETERS.VIDEO_DIR,
-            PARAMETERS.LOGOS_DIR
+            PARAMETERS.LOGOS_DIR,
+            PARAMETERS.ATTACHMENTS_DIR
         ];
 
         if (device.platform === PARAMETERS.WEB) {

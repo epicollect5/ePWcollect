@@ -20,6 +20,9 @@ export async function popoverMediaHandler ({ media, entryUuid, state, e, mediaTy
         case PARAMETERS.QUESTION_TYPES.VIDEO:
             mediaFolder = PARAMETERS.VIDEO_DIR;
             break;
+        case PARAMETERS.QUESTION_TYPES.ATTACHMENT:
+            mediaFolder = PARAMETERS.ATTACHMENTS_DIR;
+            break;
         default:
         //
     }

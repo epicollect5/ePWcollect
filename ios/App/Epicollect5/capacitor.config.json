@@ -1,5 +1,5 @@
 {
-	"appId": "uk.ac.ox.bdi.epicollect.pw",
+	"appId": "uk.ac.ox.bdi.epiwatch",
 	"appName": "Epiwatch",
 	"bundledWebRuntime": false,
 	"npmClient": "npm",

@@ -214,7 +214,7 @@
 
 				<ion-item-divider color="light">
 					<ion-label>
-						Genomic Data
+						Genomic Files
 					</ion-label>
 				</ion-item-divider>
 				<ion-row class="ion-margin-top">
@@ -230,10 +230,10 @@
 						class="ion-align-self-center"
 					>
 						<ion-button
-							:disabled="state.videos.length===0"
+							:disabled="state.attachments.length===0"
 							color="secondary"
 							expand="block"
-							@click="uploadMedia(PARAMETERS.QUESTION_TYPES.VIDEO)"
+							@click="fakeUploadMedia(PARAMETERS.QUESTION_TYPES.ATTACHMENT)"
 						>
 							<ion-icon
 								slot="start"
@@ -266,6 +266,7 @@ import { STRINGS } from '@/config/strings';
 import { useRootStore } from '@/stores/root-store';
 import { useRouter } from 'vue-router';
 import { projectModel } from '@/models/project-model.js';
+import { formModel } from '@/models/form-model.js';
 import { PARAMETERS } from '@/config';
 import { computed } from '@vue/runtime-core';
 import ModalProgressTransfer from '@/components/modals/ModalProgressTransfer';
@@ -281,6 +282,9 @@ import { mediaService } from '@/services/entry/media-service';
 import { uploadMediaService } from '@/services/upload-media-service';
 import { uploadDataService } from '@/services/upload-data-service';
 import { logout } from '@/use/logout';
+import axios from 'axios';
+import { entryService } from '@/services/entry/entry-service';
+import { locationService } from '@/services/utilities/location-cordova-service';
 
 export default {
 	setup() {
@@ -297,6 +301,7 @@ export default {
 			photos: [],
 			videos: [],
 			audios: [],
+			attachments: [],
 			errors: false,
 			canUploadData: false,
 			isUploading: false
@@ -320,6 +325,9 @@ export default {
 					}
 					if (response.audios.length > 0) {
 						state.audios = response.audios;
+					}
+					if (response.attachments.length > 0) {
+						state.attachments = response.attachments;
 					}
 					resolve();
 				})();
@@ -529,6 +537,93 @@ export default {
 					}
 				);
 			},
+
+			async fakeUploadMedia(type) {
+				await notificationService.showProgressDialog(STRINGS[language].labels.wait);
+				//get the fasta file json response
+				const data = await axios(
+					'./assets/pw-responses/458426.json',
+					+'?' + utilsService.generateTimestamp()
+				);
+
+				console.log(data);
+				const responseFormRef = '2c3a28f7d44b4235be79417b484f5ea9_6410a1f913fdf';
+				const projectRef = projectModel.getProjectRef();
+				const parentFormRef = '2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb';
+				let parentEntryUuid = '';
+
+				const form = projectModel.getExtraForm(responseFormRef);
+				// We set the first form ref as the current form ref if we don't have one already or if the form doesn't exist
+				formModel.initialise(form);
+
+				databaseSelectService
+					.selectOneEntry(projectRef, parentFormRef, '', [PARAMETERS.SYNCED_CODES.SYNCED], null)
+					.then((res) => {
+						console.log(res.rows.item(0));
+						console.log(JSON.stringify(res.rows.item(0)));
+						parentEntryUuid = res.rows.item(0).entry_uuid;
+
+						const fakeResponseEntry = {
+							entryUuid: utilsService.uuid(),
+							parentEntryUuid,
+							isRemote: 0,
+							synced: 0,
+							canEdit: 1,
+							createdAt: '',
+							title: 'Salmonella',
+							formRef: '2c3a28f7d44b4235be79417b484f5ea9_6410a1f913fdf',
+							parentFormRef: '2c3a28f7d44b4235be79417b484f5ea9_640f2e42b26cb',
+							projectRef: '2c3a28f7d44b4235be79417b484f5ea9',
+							branchEntries: {},
+							media: {},
+							uniqueAnswers: {},
+							syncedError: '',
+							isBranch: false,
+							verifyAnswers: {},
+							answers: {
+								'2c3a28f7d44b4235be79417b484f5ea9_6410a1f913fdf_64144bc2e5a89': {
+									was_jumped: false,
+									answer: '1'
+								},
+								'2c3a28f7d44b4235be79417b484f5ea9_6410a1f913fdf_64144bcae5a8a': {
+									was_jumped: false,
+									answer: 'Salmonella'
+								},
+								'2c3a28f7d44b4235be79417b484f5ea9_6410a1f913fdf_64144c3ee5a8b': {
+									was_jumped: false,
+									answer: {
+										latitude: '45.900652',
+										longitude: '12.004903',
+										accuracy: 20
+									}
+								}
+							}
+						};
+
+						entryService.setUpExisting(fakeResponseEntry);
+						entryService.saveEntry(0);
+						notificationService.hideProgressDialog();
+
+						//set the file as synced
+						console.log(state.attachments);
+
+						locationService.stopWatching();
+
+						router.replace({
+							name: PARAMETERS.ROUTES.ENTRIES,
+							params: {
+								refreshEntries: true,
+								timestamp: Date.now()
+							}
+						});
+					});
+
+				//fill in the answers for the response form (generate an entry for response)
+				//todo:
+
+				//go back and refresh ui (all entries uploaded)
+				//todo:
+			},
 			goBack() {
 				//refresh entries page only when an upload was attempted
 				if (rootStore.attemptedUploadOrErrorFix) {
@@ -575,6 +670,7 @@ export default {
 					state.photos.length === 0 &&
 					state.videos.length === 0 &&
 					state.audios.length === 0 &&
+					state.attachments.length === 0 &&
 					!state.isUploading
 				);
 			})
