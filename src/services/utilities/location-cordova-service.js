@@ -171,6 +171,7 @@ export const locationService = {
 
             }
 
+
             const watchId = navigator.geolocation.watchPosition(geolocationSuccess, geolocationError, geolocationOptions);
             //imp: check this
 

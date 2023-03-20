@@ -285,6 +285,7 @@ import { logout } from '@/use/logout';
 import axios from 'axios';
 import { entryService } from '@/services/entry/entry-service';
 import { locationService } from '@/services/utilities/location-cordova-service';
+import { databaseUpdateService } from '@/services/database/database-update-service';
 
 export default {
 	setup() {
@@ -558,7 +559,7 @@ export default {
 
 				databaseSelectService
 					.selectOneEntry(projectRef, parentFormRef, '', [PARAMETERS.SYNCED_CODES.SYNCED], null)
-					.then((res) => {
+					.then(async (res) => {
 						console.log(res.rows.item(0));
 						console.log(JSON.stringify(res.rows.item(0)));
 						parentEntryUuid = res.rows.item(0).entry_uuid;
@@ -603,11 +604,12 @@ export default {
 						entryService.setUpExisting(fakeResponseEntry);
 						entryService.saveEntry(0);
 						notificationService.hideProgressDialog();
+						locationService.stopWatching();
 
 						//set the file as synced
 						console.log(state.attachments);
 
-						locationService.stopWatching();
+						await databaseUpdateService.updateFileEntrySynced(state.attachments[0].id, 1, 0);
 
 						router.replace({
 							name: PARAMETERS.ROUTES.ENTRIES,
