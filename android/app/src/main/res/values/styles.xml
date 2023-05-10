@@ -12,9 +12,9 @@
         <item name="windowNoTitle">true</item>
         <item name="android:background">@null</item>
         <!-- Epiwatch Colors on light theme -->
-        <item name="colorPrimaryDark">#673C90</item>
-        <item name="colorAccent">#673C90</item>
-        <item name="android:statusBarColor">#331e48</item>
+        <item name="colorPrimaryDark">#3d7383</item>
+        <item name="colorAccent">#3d7383</item>
+        <item name="android:statusBarColor">#2E5662</item>
     </style>
 
     <style name="AppTheme.NoActionBarLaunch"

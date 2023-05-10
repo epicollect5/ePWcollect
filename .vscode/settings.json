@@ -115,4 +115,5 @@
             "backgroundColor": "#00B2ED"
         }
     ],
+    "java.configuration.updateBuildConfiguration": "disabled",
 }

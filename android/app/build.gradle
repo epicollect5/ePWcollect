@@ -6,8 +6,8 @@ android {
         applicationId "uk.ac.ox.bdi.epiwatch"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 5015
-        versionName "5.0.5"
+        versionCode 0010
+        versionName "0.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
