@@ -6,6 +6,7 @@
 	"webDir": "dist",
 	"plugins": {
 		"SplashScreen": {
+			"launchShowDuration": 0,
 			"androidScaleType": "CENTER_CROP",
 			"launchAutoHide": false,
 			"splashFullScreen": true,
@@ -23,7 +24,7 @@
 			"ShowSplashScreenSpinner": "false",
 			"AutoHideSplashScreen": "false",
 			"FadeSplashScreen": "false",
-			"FadeSplashScreenDuration": "10",
+			"FadeSplashScreenDuration": "0",
 			"AndroidPersistentFileLocation": "Compatibility",
 			"cordova.plugins.diagnostic.modules": "LOCATION WIFI CAMERA NOTIFICATIONS MICROPHONE EXTERNAL_STORAGE"
 		}

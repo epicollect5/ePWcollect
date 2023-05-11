@@ -102,7 +102,7 @@
   <preference name="ShowSplashScreenSpinner" value="false" />
   <preference name="AutoHideSplashScreen" value="false" />
   <preference name="FadeSplashScreen" value="false" />
-  <preference name="FadeSplashScreenDuration" value="10" />
+  <preference name="FadeSplashScreenDuration" value="0" />
   <preference name="AndroidPersistentFileLocation" value="Compatibility" />
   <preference name="cordova.plugins.diagnostic.modules" value="LOCATION WIFI CAMERA NOTIFICATIONS MICROPHONE EXTERNAL_STORAGE" />
 </widget>
